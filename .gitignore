@@ -1,9 +1,0 @@
-#1. ignore idea
-/.idea/
-
-#2. DS_store
-/.DS_store/
-
-
-#3. cmake-build-debug directory
-/cmake-build-debug/
