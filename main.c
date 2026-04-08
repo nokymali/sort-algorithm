@@ -7,6 +7,15 @@
 #include "random.h"
 #include "sort-cocktail.h"
 #include "sort-bubble.h"
+#include "sort-bucket.h"
+#include "sort-counting.h"
+#include "sort-heap.h"
+#include "sort-insertion.h"
+#include "sort-merge.h"
+#include "sort-quick.h"
+#include "sort-radix.h"
+#include "sort-selection.h"
+#include "sort-shell.h"
 
 #define MAX_COUNT 10
 
@@ -61,9 +70,27 @@ int main(const int argc, char *argv[]) {
 }
 
 void RegisterSortCB() {
+    /*ST_SELECTION,
+ST_INSERTION,
+ST_MERGE,
+ST_QUICK,
+ST_HEAP,
+ST_SHELL,
+ST_COUNTING,
+ST_BUCKET,
+ST_RADIX,
+ST_COCKTAIL,*/
     sortFuncs[ST_BUBBLE]    = BubbleSort;
+    sortFuncs[ST_SELECTION] = SelectionSort;
+    sortFuncs[ST_INSERTION] = InsertionSort;
+    sortFuncs[ST_MERGE]     = MergeSort;
+    sortFuncs[ST_QUICK]     = QuickSort;
+    sortFuncs[ST_HEAP]      = HeapSort;
+    sortFuncs[ST_SHELL]     = ShellSort;
+    sortFuncs[ST_COUNTING]  = CountingSort;
+    sortFuncs[ST_BUCKET]    = BucketSort;
+    sortFuncs[ST_RADIX]     = RadixSort;
     sortFuncs[ST_COCKTAIL]  = CockTailSort;
-    //...
 }
 
 void ElementCreate(const int count) {
@@ -104,9 +131,6 @@ void ElementDestroy() {
     free(elMgr);
     elMgr = NULL;
 }
-
-
-
 
 void DisplayInfo(const char *flag) {
     if (elMgr == NULL) {

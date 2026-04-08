@@ -8,13 +8,19 @@
 #include "sort-bubble.h"
 
 inline __attribute__((always_inline))  void BubbleSort(int array[], const int size) {
-    for (int i = 0; i < size; i++) {
-        for (int j = 0; j < size - i - 1; j++) {
+    int i = 0, j = 0, temp = 0;
+    for (i = 0; i < size - 1; i++) {
+        int swap = 0;
+        for (j = 0; j < size - i - 1; j++) {
             if (array[j] > array[j + 1]) {
-                const int temp = array[j];
+                temp = array[j];
                 array[j] = array[j + 1];
                 array[j + 1] = temp;
+                swap = 1;
             }
+        }
+        if (0 == swap) {
+            break;
         }
     }
 }

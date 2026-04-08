@@ -12,6 +12,15 @@
 
 typedef enum  SortType_ {
     ST_BUBBLE,
+    ST_SELECTION,
+    ST_INSERTION,
+    ST_MERGE,
+    ST_QUICK,
+    ST_HEAP,
+    ST_SHELL,
+    ST_COUNTING,
+    ST_BUCKET,
+    ST_RADIX,
     ST_COCKTAIL,
     ST_MAX,
 } SortType;

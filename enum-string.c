@@ -14,6 +14,33 @@ inline __attribute__((always_inline)) char *EnumToString(SortType type) {
         case ST_BUBBLE: {
             return "Sort Bubble";
         }
+        case ST_SELECTION: {
+            return "Sort Selection";
+        }
+        case ST_INSERTION: {
+            return "Sort Insertion";
+        }
+        case ST_MERGE: {
+            return "Sort Merge";
+        }
+        case ST_QUICK: {
+            return "Sort Quick";
+        }
+        case ST_HEAP: {
+            return "Sort Heap";
+        }
+        case ST_SHELL: {
+            return "Sort Shell";
+        }
+        case ST_COUNTING: {
+            return "Sort Counting";
+        }
+        case ST_BUCKET: {
+            return "Sort Bucket";
+        }
+        case ST_RADIX: {
+            return "Sort Radix";
+        }
         case ST_COCKTAIL: {
             return "Sort CockTail";
         }
